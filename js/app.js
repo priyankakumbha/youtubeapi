@@ -26,19 +26,18 @@ $.getJSON(url, params, function(data){
 function showResults(results){
 	var html = "";
   $.each(results, function(index,value){
-    var thumbURL=results[index].snippet.thumbnails.high.url ;
+    var thumbURL=value.snippet.thumbnails.high.url ;
     /* made video clicable */
-    var videoID=results[index].id.videoId;
-    var videoURL ='https://www.youtube.com/watch?v='+videoID
+    var videoID=value.id.videoId;
+    var videoURL ='https://www.youtube.com/watch?v='+videoID;
     var hrefTagStart="<a href='"+videoURL+"'>";
-     var hrefTagEnd="</a>";
+    var hrefTagEnd="</a>";
     var paraValue= "<img src= '"+thumbURL+"'style='width:300px;height:300px; margin-right:10px;'>";
   	/* display output in result area */
     html +=  hrefTagStart+paraValue +hrefTagEnd;
-    
-    
+        
   });
-  console.log(html);
+  
   $('#search-results').html(html);
 }
     
