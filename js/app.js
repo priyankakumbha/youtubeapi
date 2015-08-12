@@ -32,7 +32,7 @@ function showResults(results){
     var videoURL ='https://www.youtube.com/watch?v='+videoID;
     var hrefTagStart="<a href='"+videoURL+"'>";
     var hrefTagEnd="</a>";
-    var paraValue= "<img src= '"+thumbURL+"'style='width:300px;height:300px; margin-right:10px;'>";
+    var paraValue= "<img src= '"+thumbURL+"'style='width:250px;height:250px; margin-right:10px;'>";
   	/* display output in result area */
     html +=  hrefTagStart+paraValue +hrefTagEnd;
         
